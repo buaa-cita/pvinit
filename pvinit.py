@@ -9,7 +9,8 @@ parser.add_argument('--nodes','-n', dest='nodes',nargs='+',type=str,help='name o
 parser.add_argument('--clean','-cl', dest='clean',help='delete all files in node dir',action='store_true')
 args = parser.parse_args()
 
-chainPath=os.path.join(args.root,args.chain)
+allPath=os.path.join(args.root,'cita-cloud')
+chainPath=os.path.join(allPath,args.chain)
 
 if not os.path.exists(args.root):
     print('root path:',args.root,'does not exist')
